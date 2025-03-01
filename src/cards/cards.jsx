@@ -1,16 +1,24 @@
 import React from 'react';
 import { Card } from 'antd';
 
-const { Meta } = Card;
+import { cardData } from './card';
+import './card.css';
 
-const Cards = () => (
-  <Card
-    hoverable
-    style={{ width: 240 }}
-    cover={<img alt="example" src="https://os.alipayobjects.com/rmsportal/QBnOOoLaAfKPirc.png" />}
-  >
-    <Meta title="Europe Street beat" description="www.instagram.com" />
-  </Card>
+
+const Section = () => (
+  <>
+   <h2 className='featured-card'>Featured Events</h2>
+  <div className="section-container">
+    {cardData.map((card) => (
+      <Card key={card.id} className="card">
+        <p><img src={card.image} alt={card.title} className='img-container' /></p>
+        <h3>{card.title}</h3>
+        <p>{card.description}</p>
+      </Card>
+    ))}
+  </div>
+  
+  </>
 );
 
-export default Cards;
+export default Section;

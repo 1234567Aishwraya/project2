@@ -5,17 +5,19 @@ import Contact from './navbar/contact'
 import About from './navbar/about'
 import Login from './navbar/login';
 import Register from './navbar/register';
-import Footer from './footer section/footer';
-import Delivery from './footer section/delivary';
-import CancellationRefund from './footer section/refund';
-import PrivacyPolicy from './footer section/privacy';
-import TermsConditions from './footer section/conditions';
-import WhoWeAre from './footer section/whoweare';
-import OurMission from './footer section/ourmission';
-import CustomerReviews from './footer section/customer';
-import TravelAssistance from './footer section/travel';
-import ExclusiveDeals from './footer section/exclusive';
-import HotelReservations from './footer section/reservations';
+import Footer from './footer_section/footer.jsx';
+import Delivery from './footer_section/delivary.jsx';
+import CancellationRefund from './footer_section/refund.jsx';
+import PrivacyPolicy from './footer_section/privacy.jsx';
+import TermsConditions from './footer_section/conditions.jsx';
+import WhoWeAre from './footer_section/whoweare.jsx';
+import OurMission from './footer_section/ourmission.jsx';
+import CustomerReviews from './footer_section/customer.jsx';
+import TravelAssistance from './footer_section/travel.jsx';
+import ExclusiveDeals from './footer_section/exclusive.jsx';
+import HotelReservations from './footer_section/reservations.jsx';
+import { Provider } from "react-redux";
+import Store from './searchbar/store';
 
 
 
@@ -27,8 +29,11 @@ function App() {
 
   return (
     <>
+   
     <Router>
+    <Provider store={Store}>
       <Navbar/>
+     
       <Routes>
     <Route path='/' element={<Home/>}/>
     <Route path='/Contact' element={<Contact/>}/>
@@ -46,9 +51,10 @@ function App() {
     <Route path='/exclusive' element={<ExclusiveDeals/>}/>
     <Route path='/reservations' element={<HotelReservations/>}/>
       </Routes>
+      </Provider>
       <Footer/>
     </Router>
-  
+ 
     </>
   )
 }
