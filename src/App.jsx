@@ -24,6 +24,10 @@ import Store from './searchbar/store';
 
 
 
+
+
+
+
 function App() {
  
 
@@ -52,6 +56,7 @@ function App() {
     <Route path='/reservations' element={<HotelReservations/>}/>
       </Routes>
       </Provider>
+    
       <Footer/>
     </Router>
  

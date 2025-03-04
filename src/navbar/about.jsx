@@ -1,11 +1,15 @@
 import React from "react";
+import WhoWeAre from "../footer_section/whoweare";
+import OurMission from "../footer_section/ourmission";
+import CustomerReviews from "../footer_section/customer";
 
 const About = () => {
   return (
-    <div className="about">
-      <h1>About Our Hotel</h1>
-      <p>Providing top-notch hospitality services for over a decade.</p>
-    </div>
+    <>
+     <WhoWeAre/>
+     <OurMission/>
+     <CustomerReviews/>
+    </>
   );
 };
 
