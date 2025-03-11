@@ -44,7 +44,7 @@ const SearchBar = () => {
         padding: 1.5,
         borderRadius: 3,
         boxShadow: 3,
-        maxWidth: "900px",
+        maxWidth: "800px",
         margin: "auto",
         border: "3px solid white",
         flexWrap: "wrap",
@@ -176,8 +176,9 @@ const SearchBar = () => {
         variant="contained"
         color="primary"
         sx={{
-          width: { xs: "100%", sm: "auto" },
+          width: { xl: "100%", sm: "auto" },
           fontSize: "16px",
+          padding: "10px 24px",
           backgroundColor: "#6a2e1f",
           ":hover": { backgroundColor: "#f4a261" },
         }}
